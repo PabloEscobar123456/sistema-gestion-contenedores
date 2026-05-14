@@ -1,0 +1,20 @@
+@startuml
+class Empresa {
+  - nombre: String
+  + getNombre(): String
+  + añadirEmpleado(e: Empleado)
+}
+
+class Empleado {
+  - id: int
+  - nombre: String
+}
+
+class Gerente {
+  - bono: double
+  + calcularSalario(): double
+}
+
+Empresa "1" *-- "0..*" Empleado   // Composición (rombo lleno)
+Gerente --|> Empleado             // Herencia (triángulo vacío)
+@enduml
