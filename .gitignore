@@ -1,1 +1,21 @@
-target/\n*.class\n*.log
+cat > .gitignore << 'EOF'
+# Compilados
+*.class
+*.jar
+*.war
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+EOF
